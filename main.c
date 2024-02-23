@@ -31,5 +31,8 @@ int main(int argc, char **argv)
     if (argv[1][i - 4] != '.' || argv[1][i - 3] != 'b' || argv[1][i - 2] != 'e' || argv[1][i - 1] != 'r')
         ft_error(&data, "error in the extension. Must be <.ber>\n");
     ft_read_map(argv, &data);
-    ft_check_errors(&data); // continuar aqui
+    ft_check_errors(&data);
+    data.mlx_cont = mlx_init();
+    if (!data.mlx_cont)
+        return (1);
 }

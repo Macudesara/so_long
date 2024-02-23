@@ -11,16 +11,18 @@
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include <stdio.h>
+//reemplazar printf
 
 void    ft_memory_map(t_data *data, int fd)
 {
     int i;
 
     i = 0;
-    data->map = malloc(sizeof(char *) * data->col + 1);
+    data->map = malloc(sizeof(char *) * data->row + 1);
     if (!data->map)
         ft_error(data, "error creating malloc\n");
-    while (data->col - i)
+    while (data->row - i)
     {
         data->map[i] = get_next_line(fd);
         if (!data->map[i])
@@ -28,25 +30,30 @@ void    ft_memory_map(t_data *data, int fd)
         i++;
     }
     data->map[i] = NULL;
+    //printf("col = %i\n", data->col);
+    //printf("row = %i\n", data->row);
 }
 
 void    ft_get_size_map(int fd, t_data *data)
 {
-    char    *line;
+    char    *y;
 
-    line = get_next_line(fd);
-	if (!line)
+    y = get_next_line(fd);
+	if (!y)
 		ft_error(data, "error when reading the map\n");
-    data->col = 1;
-    while (line[data->row])
-        data->row++;
-    while (line)
+    data->row = 1;
+    while (y[data->col])
     {
-        free (line);
-        line = get_next_line(fd);
-        if (!line)
-            return ;
+        //printf("col= %i\n", data->col);
         data->col++;
+    }
+    while (y)
+    {
+        free (y);
+        y = get_next_line(fd);
+        if (!y)
+            return ;
+        data->row++;
     }
 }
 
