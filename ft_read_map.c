@@ -30,8 +30,6 @@ void    ft_memory_map(t_data *data, int fd)
         i++;
     }
     data->map[i] = NULL;
-    //printf("col = %i\n", data->col);
-    //printf("row = %i\n", data->row);
 }
 
 void    ft_get_size_map(int fd, t_data *data)
@@ -43,10 +41,7 @@ void    ft_get_size_map(int fd, t_data *data)
 		ft_error(data, "error when reading the map\n");
     data->row = 1;
     while (y[data->col])
-    {
-        //printf("col= %i\n", data->col);
         data->col++;
-    }
     while (y)
     {
         free (y);

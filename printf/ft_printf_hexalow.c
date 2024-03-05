@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-//#include <stdio.h>
 
 void	ft_printf_hexalow(unsigned long long int num, int *count)
 {

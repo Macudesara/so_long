@@ -16,7 +16,14 @@ void    ft_ini_data(t_data *data)
 {
     data->col = 0;
     data->row = 0;
+    data->x = 0;
+    data->y = 0;
     data->map = NULL;
+    data->pos_x = 0;
+    data->pos_y = 0;
+    data->coins = 0;
+    data->coins_flood = 0;
+    data->flood_fill_check = 0;
 }
 
 int main(int argc, char **argv)
@@ -35,4 +42,13 @@ int main(int argc, char **argv)
     data.mlx_cont = mlx_init();
     if (!data.mlx_cont)
         return (1);
+    data.mlx_wind = mlx_new_window(data.mlx_cont, (data.col * 40), data.row * 40, "So_long");
+    if (!data.mlx_wind)
+    {
+        free(data.mlx_cont);
+        return (1);
+    }
+    ft_load_images(&data);
+    ft_make_map(&data);
+    mlx_loop(data.mlx_cont);
 }

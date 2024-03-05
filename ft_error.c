@@ -19,6 +19,7 @@ int    ft_error(t_data *data, char *message)
     int i;
 
     i = 0;
+    free(data);
     // if()
     // {
     //     free();
@@ -38,6 +39,6 @@ void    ft_check_errors(t_data *data)
         ft_error(data, "error in the position of p\n");
     if (ft_count_coins_c(data) == 0)
         ft_error(data, "no c found\n");
-    if (ft_flood_fill(data) != 1)
+    if (ft_flood_fill(data) == 1)
 		ft_error(data, "error filling the map\n");
 }

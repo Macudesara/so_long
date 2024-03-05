@@ -13,37 +13,6 @@
 #include "so_long.h"
 #include <stdio.h>
 
-int		ft_get_p_position(t_data *data)
-{
-    int i;
-    int lines;
-    int flag;
-
-    i = 0;
-    lines = 1;
-    while (lines < data->row)
-    {
-        i = 0;
-        while (i < data->col)
-        {
-            if (data->map[lines][i] == 'P')
-            {
-                data->line_posi = lines;
-                data->i_posi = i;
-                flag = 0;
-                printf("position of P in lines: %d\n", lines + 1);
-                printf("position of P in i: %d\n", i + 1);
-                printf("ok position de P\n");
-            }
-            i++;
-        }
-        lines++;
-    }
-    if (flag != 0)
-        return (1);
-    return (0);
-}
-
 int		ft_count_coins_c(t_data *data)
 {
     int	i;
@@ -61,8 +30,35 @@ int		ft_count_coins_c(t_data *data)
 		}
 		lines++;
 	}
-    printf("cantidad de coins: %d\n", data->coins);
     return (data->coins);
+}
+
+int		ft_get_p_position(t_data *data)
+{
+    int i;
+    int lines;
+    int flag;
+
+    i = 0;
+    lines = 1;
+    while (lines < data->row)
+    {
+        i = 0;
+        while (i < data->col)
+        {
+            if (data->map[lines][i] == 'P')
+            {
+                data->pos_y = lines;
+                data->pos_x = i;
+                flag = 0;
+            }
+            i++;
+        }
+        lines++;
+    }
+    if (flag != 0)
+        return (1);
+    return (0);
 }
 
 int ft_check_wall_first_last(t_data *data)
@@ -75,20 +71,14 @@ int ft_check_wall_first_last(t_data *data)
     while (y < data->row - 1)
     {
         if ((data->map[y][0]) != '1')
-        {
-            printf("error 3\n");
             return (1);
-        }
         y++;
     }
     y = 0;
     while (y < data->row - 1)
     {
         if (data->map[y][x] != '1')
-        {
-            printf("error 4\n");
             return (1);
-        }
         y++;
     }
     return (0);
@@ -104,20 +94,14 @@ int ft_check_wall_top_bottom(t_data *data)
     while (x < data->col - 1)
     {
         if (data->map[0][x] != '1')
-        {
-            printf("error 1\n");
             return (1);
-        }
         x++;
     }
     x = 0;
     while (x < data->col - 1)
     {
         if (data->map[y][x] != '1')
-        {
-            printf("error 2\n");
             return (1);
-        }
         x++;
     }
     return (0);
