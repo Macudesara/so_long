@@ -67,7 +67,7 @@ int ft_check_wall_first_last(t_data *data)
     int x;
 
     y = 0;
-    x = data->col - 2;
+    x = data->col - 1;
     while (y < data->row - 1)
     {
         if ((data->map[y][0]) != '1')

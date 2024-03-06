@@ -19,7 +19,7 @@ void    ft_memory_map(t_data *data, int fd)
     int i;
 
     i = 0;
-    data->map = malloc(sizeof(char *) * data->row + 1);
+    data->map = malloc(sizeof(char *) * (data->row + 1));
     if (!data->map)
         ft_error(data, "error creating malloc\n");
     while (data->row - i)
@@ -40,7 +40,7 @@ void    ft_get_size_map(int fd, t_data *data)
 	if (!y)
 		ft_error(data, "error when reading the map\n");
     data->row = 1;
-    while (y[data->col])
+    while (y[data->col] != '\0' && y[data->col] != '\n')
         data->col++;
     while (y)
     {

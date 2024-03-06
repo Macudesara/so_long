@@ -39,7 +39,7 @@ typedef struct s_data
 	void	*img_fondo;
 }				t_data;
 
-void    ft_ini_data(t_data *data);
+void	*ft_memset(void *str, int c, size_t n);
 int     ft_error(t_data *data, char *message);
 void    ft_read_map(char **argv, t_data *data);
 void    ft_get_size_map(int fd, t_data *data);
@@ -55,3 +55,6 @@ void    ft_fill(t_data *data, int pos_x, int pos_y);
 void	ft_load_images(t_data *data);
 void	ft_make_map(t_data *data);
 void    ft_put_img_in_map(t_data *data, int w, int h);
+void	ft_instructions(void);
+int 	key_hook(int keycode, t_data *data);
+void	ft_endgame(void);

@@ -19,7 +19,7 @@ int    ft_error(t_data *data, char *message)
     int i;
 
     i = 0;
-    free(data);
+    (void)data;
     // if()
     // {
     //     free();
