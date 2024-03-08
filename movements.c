@@ -31,8 +31,6 @@ int ft_up(t_data *data)
             ft_esc(data);
         data->map[data->pos_y][data->pos_x] = 'o';
         data->map[--data->pos_y][data->pos_x] = 'e';
-        // data->map[data->pos_y][data->pos_x] = 'p';
-        // data->map[data->pos_y][++data->pos_x] = 'e';
         return (0);
     }
     else if (data->map[data->pos_y - 1][data->pos_x] == 'e')
@@ -58,10 +56,10 @@ int ft_down(t_data *data)
     {
         if (data->collected_coins == data->coins)
             ft_esc(data);
-        data->map[data->pos_y][data->pos_x] = 'o';
-        data->map[++data->pos_y][data->pos_x] = 'e';
-        // data->map[data->pos_y][data->pos_x] = 'p';
-        // data->map[data->pos_y][++data->pos_x] = 'e';
+        else
+            ft_exit_p(data);
+        // data->map[data->pos_y][data->pos_x] = 'o';
+        // data->map[++data->pos_y][data->pos_x] = 'e';
         return (0);
     }
     else if (data->map[data->pos_y + 1][data->pos_x] == 'e')
@@ -91,10 +89,8 @@ int ft_right(t_data *data)
         {
             data->map[data->pos_y][data->pos_x] = 'o';
             data->map[data->pos_y][++data->pos_x] = 'e';
-            // data->map[data->pos_y][data->pos_x] = 'p';
-            // data->map[data->pos_y][data->pos_x] = 'e';
         }
-        //return (0);
+        return (0);
     }
     else if (data->map[data->pos_y][data->pos_x + 1] == 'e')
         data->map[data->pos_y][data->pos_x] = 'E';
@@ -121,8 +117,6 @@ int ft_left(t_data *data)
             ft_esc(data);
         data->map[data->pos_y][data->pos_x] = 'o';
         data->map[data->pos_y][--data->pos_x] = 'e';
-        // data->map[data->pos_y][data->pos_x] = 'p';
-        // data->map[data->pos_y][++data->pos_x] = 'e';
         return (0);
     }
     else if (data->map[data->pos_y][data->pos_x - 1] == 'e')

@@ -4,4 +4,6 @@ EL MAPA DEBE SER RECTANGULAR
 CHEQUEAR ERROR CUANDO HAY UNA PARED FALTANTE EN EL MAPA
 NUMERO DE MOV DEBE MOSTRARSE AL FINAL EN LA TERMINAL.
 
+ft_exit_p() funcion creada para imprimir el fondo, la salida, y por encima el personaje, cuando no se han coleccionado todos los coleccionables.
+
 https://github.com/keybladd5/so_long/blob/main/src/main.c
