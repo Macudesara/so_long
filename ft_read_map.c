@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include <stdio.h>
-//reemplazar printf
 
 void    ft_memory_map(t_data *data, int fd)
 {

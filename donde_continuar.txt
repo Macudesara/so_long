@@ -1,13 +1,7 @@
-
-1. recordar reemplazar los printf
-
 poner limites en el mapa
 
 EL MAPA DEBE SER RECTANGULAR
-WASD PARA MOVER AL PERSONAJE
-el jugador no puede entrar en las paredes
+CHEQUEAR ERROR CUANDO HAY UNA PARED FALTANTE EN EL MAPA
 NUMERO DE MOV DEBE MOSTRARSE AL FINAL EN LA TERMINAL.
-ESC para cerrar el programa
-
 
 https://github.com/keybladd5/so_long/blob/main/src/main.c

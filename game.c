@@ -1,5 +1,4 @@
 #include "so_long.h"
-#include <stdio.h>
 
 void    ft_instructions(void)
 {
@@ -19,8 +18,8 @@ void    ft_instructions(void)
 
 void	ft_endgame(void)
 {
-	ft_printf("			🏆 YOU EARNED THE 3RD START ⭐️\n");
-    ft_printf("			        CONGRATULATIONS\n");
+	ft_printf("	     	    	🏆 YOU EARNED THE 3RD START ⭐️\n");
+    ft_printf("			           CONGRATULATIONS\n");
 }
 
 void    ft_load_images(t_data *data)
@@ -77,8 +76,8 @@ void	ft_make_map(t_data *data)
         width = 0;
         while (data->x <= data->col)
         {
-            if (data->map[data->y][data->x] == '0')
-                data->map[data->y][data->x] = 'o';
+            // if (data->map[data->y][data->x] == '0')
+            //     data->map[data->y][data->x] = 'o';
             ft_put_img_in_map(data, width, height);
             data->x++;
             width += 50;

@@ -11,21 +11,22 @@
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include <stdio.h>
-//reemplazar printf
 
 int    ft_error(t_data *data, char *message)
 {
     int i;
 
     i = 0;
-    (void)data;
-    // if()
-    // {
-    //     free();
-    // }
-    //ft_printf("Error\n%s", message);
-    printf("Error\n%s", message);
+    if (data->map)
+    {
+        while (data->map[i])
+        {
+            free(data->map[i]);
+            i++;
+        }
+        free(data->map);
+    }
+    ft_printf("Error\n%s", message);
     return (1);
 }
 

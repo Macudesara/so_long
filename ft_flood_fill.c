@@ -1,5 +1,4 @@
 #include "so_long.h"
-#include <stdio.h>
 
 void    ft_fill(t_data *data, int pos_x, int pos_y)
 {

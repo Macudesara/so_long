@@ -23,6 +23,7 @@ typedef struct s_data
 	int		x;
 	int		y;
 	int		coins;
+	int		collected_coins;
 	int		pos_x;
 	int		pos_y;
 	int		coins_flood;
@@ -37,6 +38,7 @@ typedef struct s_data
 	void	*img_p;
 	void	*img_e;
 	void	*img_fondo;
+	//int		movements;
 }				t_data;
 
 void	*ft_memset(void *str, int c, size_t n);
@@ -58,3 +60,9 @@ void    ft_put_img_in_map(t_data *data, int w, int h);
 void	ft_instructions(void);
 int 	key_hook(int keycode, t_data *data);
 void	ft_endgame(void);
+int		ft_esc(t_data *data);
+int		ft_up(t_data *data);
+int		ft_down(t_data *data);
+int		ft_right(t_data *data);
+int		ft_left(t_data *data);
+int		mov_p(t_data *data);

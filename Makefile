@@ -16,7 +16,7 @@ CC = gcc
 FLAGS = -Wall -Wextra -Werror -fsanitize="address,undefined" -g
 RM = rm -rf
 
-SOURCES = main.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c ft_check_errors.c ft_error.c ft_read_map.c ft_flood_fill.c game.c printf/ft_printf_char.c printf/ft_printf_hexalow.c printf/ft_printf_hexaptr.c printf/ft_printf_hexaup.c printf/ft_printf_i_d.c printf/ft_printf_str.c printf/ft_printf_unsig.c printf/protoprintf.c hook.c
+SOURCES = main.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c ft_check_errors.c ft_error.c ft_read_map.c ft_flood_fill.c game.c printf/ft_printf_char.c printf/ft_printf_hexalow.c printf/ft_printf_hexaptr.c printf/ft_printf_hexaup.c printf/ft_printf_i_d.c printf/ft_printf_str.c printf/ft_printf_unsig.c printf/protoprintf.c hook.c movements.c
 
 MLX = -framework OpenGL -framework AppKit
 
