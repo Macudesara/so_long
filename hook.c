@@ -5,9 +5,8 @@ int key_hook(int keycode, t_data *data)
 	if (keycode == 53)
 	{
 		ft_esc(data);
-		ft_printf("0 movements\n");
-    	ft_printf("You have pressed the ESC key\n");
-    	ft_printf("The game is over\n");
+    		ft_printf("\nYou have pressed the ESC key\n");
+    		ft_printf("The game is over\n");
 	}
 	else if ((keycode == 126 || keycode == 13) && (ft_up(data) == 0))
 		data->movements++;
