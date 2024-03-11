@@ -38,7 +38,7 @@ typedef struct s_data
 	void	*img_p;
 	void	*img_e;
 	void	*img_fondo;
-	//int		movements;
+	int		movements;
 }				t_data;
 
 void	*ft_memset(void *str, int c, size_t n);
@@ -65,4 +65,3 @@ int		ft_up(t_data *data);
 int		ft_down(t_data *data);
 int		ft_right(t_data *data);
 int		ft_left(t_data *data);
-int		mov_p(t_data *data);

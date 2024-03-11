@@ -13,13 +13,13 @@ void    ft_instructions(void)
 	ft_printf("-----------------------------------------------------------------------------------\n");
 	ft_printf("        💙 Collect all the Ballon d'Or and reach the world cup to WIN the game! 💙\n");
 	ft_printf("\n			        Good luck CHAMPION 🏆\n\n");
-	ft_printf("↓MOVEMENTS↓\n");
+	//ft_printf("↓MOVEMENTS↓\n");
 }
 
 void	ft_endgame(void)
 {
 	ft_printf("	     	    	🏆 YOU EARNED THE 3RD START ⭐️\n");
-    ft_printf("			           CONGRATULATIONS\n");
+    ft_printf("			        CONGRATULATIONS\n");
 }
 
 void    ft_load_images(t_data *data)
@@ -76,8 +76,6 @@ void	ft_make_map(t_data *data)
         width = 0;
         while (data->x <= data->col)
         {
-            // if (data->map[data->y][data->x] == '0')
-            //     data->map[data->y][data->x] = 'o';
             ft_put_img_in_map(data, width, height);
             data->x++;
             width += 50;
