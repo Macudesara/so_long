@@ -5,7 +5,7 @@ int ft_esc(t_data *data)
     int i;
 
     i = 0;
-
+    ft_printf("You have finished the game in %d movements\n", data->movements);
     mlx_destroy_window(data->mlx_cont, data->mlx_wind);
     free(data->mlx_cont);
     while (data->map[i])
