@@ -2,9 +2,9 @@
 
 void    ft_instructions(void)
 {
-    ft_printf("\n Project made by mde-sara 🏑\n");
+    	ft_printf("\n Project made by mde-sara 🏑\n");
 	ft_printf("\n                  ⚽️ Welcome back to the 2022 world cup final ⚽️ \n");
-    ft_printf("\n Today, you'll have the oportunity to play for Argentine 🤩 national team with Messi\n");
+    	ft_printf("\n Today, you'll have the oportunity to play for Argentine 🤩 national team with Messi\n");
 	ft_printf("-----------------------------------------------------------------------------------\n");
 	ft_printf("	                   	Press W or ↑ to go UP!\n");
 	ft_printf("		        	Press S or ↓ to go DOWN!\n");
@@ -13,13 +13,12 @@ void    ft_instructions(void)
 	ft_printf("-----------------------------------------------------------------------------------\n");
 	ft_printf("        💙 Collect all the Ballon d'Or and reach the world cup to WIN the game! 💙\n");
 	ft_printf("\n			        Good luck CHAMPION 🏆\n\n");
-	//ft_printf("↓MOVEMENTS↓\n");
 }
 
 void	ft_endgame(void)
 {
-	ft_printf("	     	    	🏆 YOU EARNED THE 3RD START ⭐️\n");
-    ft_printf("			        CONGRATULATIONS\n");
+	ft_printf("\n	     	    	🏆 YOU EARNED THE 3RD START ⭐️\n");
+	ft_printf("			        CONGRATULATIONS\n");
 }
 
 void    ft_load_images(t_data *data)
