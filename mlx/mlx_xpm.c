@@ -26,14 +26,10 @@ struct  s_col_name
 //extern struct s_col_name mlx_col_name[];
 #include "mlx_rgb.c"
 
-
 #define	RETURN	{ if (colors) free(colors); if (tab) free(tab); \
 		  if (colors_direct) free(colors_direct); \
                   if (img) mlx_destroy_image(xvar, img);   \
                   return ((void *)0); }
-
-
-
 
 char	*mlx_int_get_line(char *ptr,int *pos,int size)
 {
@@ -108,7 +104,6 @@ int	mlx_int_get_text_rgb(char *name, char *end)
   return (0);
 }
 
-
 void	mlx_int_xpm_set_pixel(mlx_img_list_t *img, char *data, int opp, int col, int x)
 {
   /*
@@ -127,7 +122,6 @@ void	mlx_int_xpm_set_pixel(mlx_img_list_t *img, char *data, int opp, int col, in
   // opp is 4, do it the simple way
   *((unsigned int *)(data+4*x)) = col;
 }
-
 
 void	*mlx_int_parse_xpm(mlx_ptr_t *xvar,void *info,int info_size,char *(*f)())
 {

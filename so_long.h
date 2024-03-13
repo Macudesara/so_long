@@ -6,7 +6,7 @@
 /*   By: mde-sara <mde-sara@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 11:12:37 by mde-sara          #+#    #+#             */
-/*   Updated: 2024/02/09 11:12:39 by mde-sara         ###   ########.fr       */
+/*   Updated: 2024/03/13 15:26:24 by mde-sara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_data
 	int		pos_y;
 	int		coins_flood;
 	int		flood_fill_check;
-    char    **map;
+	char	**map;
 	int		line_posi;
 	int		i_posi;
 	void	*mlx_cont;
@@ -42,25 +42,30 @@ typedef struct s_data
 }				t_data;
 
 void	*ft_memset(void *str, int c, size_t n);
-int     ft_error(t_data *data, char *message);
-void    ft_read_map(char **argv, t_data *data);
-void    ft_get_size_map(int fd, t_data *data);
-void    ft_memory_map(t_data *data, int fd);
-void    ft_check_errors(t_data *data);
-int 	ft_check_epc01(t_data *data);
+int		ft_check_extension(char *arg);
+int		ft_error(t_data *data, char *message);
+void	ft_read_map(char **argv, t_data *data);
+void	ft_get_size_map(int fd, t_data *data);
+void	ft_memory_map(t_data *data, int fd);
+void	ft_check_errors(t_data *data);
+int		ft_check_epc01(t_data *data);
 int		ft_get_p_position(t_data *data);
 int		ft_check_wall_top_bottom(t_data *data);
 int		ft_check_wall_first_last(t_data *data);
 int		ft_count_coins_c(t_data *data);
-int     ft_flood_fill(t_data *data);
-void    ft_fill(t_data *data, int pos_x, int pos_y);
-void	ft_load_images(t_data *data);
+int		ft_flood_fill(t_data *data);
+void	ft_fill(t_data *data, int pos_x, int pos_y);
 void	ft_make_map(t_data *data);
-void    ft_put_img_in_map(t_data *data, int w, int h);
+void	ft_load_images(t_data *data);
+void	ft_put_img_fondo(t_data *data, int w, int h);
+void	ft_put_img_personaje(t_data *data, int w, int h);
+void	ft_put_img_collectable(t_data *data, int w, int h);
+void	ft_put_img_exit(t_data *data, int w, int h);
+void	ft_put_img_in_map(t_data *data, int w, int h);
 void	ft_instructions(void);
-int 	key_hook(int keycode, t_data *data);
+int		key_hook(int keycode, t_data *data);
 void	ft_endgame(void);
-int		ft_esc(t_data *data);
+int		ft_esc(t_data *data, int flag);
 int		ft_up(t_data *data);
 int		ft_down(t_data *data);
 int		ft_right(t_data *data);

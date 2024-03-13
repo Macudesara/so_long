@@ -1,5 +1,0 @@
-poner limites en el mapa
-
-56 * 26
-
-https://github.com/keybladd5/so_long/blob/main/src/main.c
