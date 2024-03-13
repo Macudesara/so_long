@@ -27,11 +27,15 @@ int    ft_error(t_data *data, char *message)
         free(data->map);
     }
     ft_printf("Error\n%s", message);
-    return (1);
+    exit (1);
 }
 
 void    ft_check_errors(t_data *data)
 {
+    if (data->row == data->col)
+        ft_error(data, "the map is not a rectangle\n");
+    if (data->row > 26 || data->col > 56)
+        ft_error(data, "map too big\n");
     if (ft_check_epc01(data) == 1)
         ft_error(data, "letters do not match\n");
     if (ft_check_wall_top_bottom(data) == 1 || ft_check_wall_first_last(data) == 1)

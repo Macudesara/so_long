@@ -14,9 +14,9 @@ int ft_esc(t_data *data)
         i++;
     }
     free(data->map);
-    if (data->coins == data->coins_flood)
+    if (data->coins == data->collected_coins)
         ft_endgame();
-    return (0);
+    exit (0);
 }
 
 int ft_up(t_data *data)

@@ -97,7 +97,7 @@ int ft_check_wall_top_bottom(t_data *data)
         x++;
     }
     x = 0;
-    while (x < data->col - 1)
+    while (x < data->col)
     {
         if (data->map[y][x] != '1')
             return (1);
