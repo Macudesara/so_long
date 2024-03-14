@@ -29,6 +29,7 @@ int	main(int argc, char **argv)
 {
 	t_data	data;
 
+	data.map = NULL;
 	if (argc != 2 || ft_check_extension(argv[1]) == 1)
 		ft_error(&data, "error in the extension. Must be <.ber>\n");
 	ft_memset(&data, '\0', sizeof(data));

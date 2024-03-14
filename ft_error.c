@@ -28,6 +28,8 @@ int	ft_error(t_data *data, char *message)
 	int	i;
 
 	i = 0;
+	if (!data->map)
+		exit (1);
 	if (data->map)
 	{
 		while (data->map[i])
